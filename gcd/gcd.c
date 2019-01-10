@@ -42,14 +42,15 @@ int gcd(int m, int n){
 
 // Swap the numbers
 void swap(int *m,int *n){
-	*m = *m + *n;
-	*n = *m - *n;
-	*m = *m - *n;
+	int *temp;
+	temp = m;
+	m = n;
+	n = temp;
 }
 
 int main() {
 	int m,n;
 	scanf("%d %d",&m,&n);
-	printf("\n GDC : %d",gcd(m,n));
+	printf("GDC : %d",gcd(m,n));
 	return 0;
 }
